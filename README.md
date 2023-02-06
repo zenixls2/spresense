@@ -69,6 +69,29 @@ SpresenseSDK: $ spresense tools/config.py examples/hello
 SpresenseSDK: $ spresense make
 ```
 
+# Network over usb
+
+Check this youtube video: https://www.youtube.com/watch?v=dk3jqhn9XQ4
+In `sdk/configs/myconfig/deconf` already include all the changes required.
+
+To use it:
+```bash
+$ tools/config.py myconfig
+```
+
+or if you need to modify details using menuconfig:
+```bash
+$ tools/config.py myconfig -m
+```
+
+And don't forget to save the changes back to myconfig:
+```bash
+$ tools/mkdefconfig.py myconfig
+```
+
+We could set the connectivity of the host machine in NetworkManager by setting `Shared to other computers` in the IPv4 tab.
+
+
 [twitter spresense handle]: https://img.shields.io/twitter/follow/SpresensebySony?style=social&logo=twitter
 [twitter spresense badge]: https://twitter.com/intent/follow?screen_name=SpresensebySony
 [twitter devworld handle]: https://img.shields.io/twitter/follow/SonyDevWorld?style=social&logo=twitter
