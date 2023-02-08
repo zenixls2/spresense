@@ -86,7 +86,7 @@ $ tools/config.py myconfig -m
 
 And don't forget to save the changes back to myconfig:
 ```bash
-$ tools/mkdefconfig.py myconfig
+$ make savedefconfig && cp defconfig configs/myconfig/
 ```
 
 We could set the connectivity of the host machine in NetworkManager by setting `Shared to other computers` in the IPv4 tab.
